@@ -728,10 +728,10 @@ bool External::runOnModule(Module &M) {
                     delete *kk;
                 }
             }
-            
-            extObjs.erase(ii);
-
+                
             delete (*ii)->layout;
+            
+            ii = extObjs.erase(ii);
 
         } else ++ii;                                // object is good. Move iterator
     }
